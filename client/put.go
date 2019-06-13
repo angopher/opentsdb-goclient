@@ -273,7 +273,7 @@ func isValidPutParam(param string) bool {
 		return true
 	}
 	param = strings.TrimSpace(param)
-	if param != PutRespWithSummary && param != PutRespWithDetails {
+	if param != PutRespWithSummary && param != PutRespWithDetails && param != PutRespWithSync && param != PutRespWithSyncTimeout {
 		return false
 	}
 	return true

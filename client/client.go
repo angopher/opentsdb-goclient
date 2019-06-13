@@ -44,9 +44,11 @@ const (
 	PutMethod          = "PUT"
 	DeleteMethod       = "DELETE"
 
-	PutPath            = "/api/put"
-	PutRespWithSummary = "summary"
-	PutRespWithDetails = "details"
+	PutPath                = "/api/put"
+	PutRespWithSummary     = "summary"
+	PutRespWithDetails     = "details"
+	PutRespWithSync        = "sync"
+	PutRespWithSyncTimeout = "sync_timeout"
 
 	QueryPath     = "/api/query"
 	QueryLastPath = "/api/query/last"
