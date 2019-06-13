@@ -33,7 +33,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bluebreezecf/opentsdb-goclient/config"
+	"github.com/angopher/opentsdb-goclient/config"
 )
 
 const (
