@@ -102,9 +102,6 @@ func (c *clientImpl) Put(datas []DataPoint, queryParam string) (*PutResponse, er
 	if err != nil {
 		return nil, err
 	}
-	if !isValidPutParam(queryParam) {
-		return nil, errors.New("The given query param is invalid.")
-	}
 	var putEndpoint = ""
 	if !isEmptyPutParam(queryParam) {
 		putEndpoint = fmt.Sprintf("%s%s?%s", c.tsdbEndpoint, PutPath, queryParam)
