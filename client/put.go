@@ -109,11 +109,8 @@ func (c *clientImpl) Put(datas []DataPoint, queryParam string) (*PutResponse, er
 		putEndpoint = fmt.Sprintf("%s%s", c.tsdbEndpoint, PutPath)
 	}
 
-	dataGroups, err := c.splitProperGroups(datas)
-	if err != nil {
-		return nil, err
-	}
-
+    dataGroups := make([][]DataPoint, 1)
+    dataGroups[0] = datas
 	responses := make([]PutResponse, 0)
 	for _, datapoints := range dataGroups {
 		// The datas have been marshalled successfully in splitProperGroups(),
